@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "libspeechprovider-rs/libspeechprovider-sys",
-    "libspeechprovider-rs",
+    "speechprovider-rs/sys",
+    "speechprovider-rs",
 ]
 
