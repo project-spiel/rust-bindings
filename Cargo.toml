@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "libspeechprovider-rs/libspeechprovider-sys",
+    "libspeechprovider-rs",
+]
+
