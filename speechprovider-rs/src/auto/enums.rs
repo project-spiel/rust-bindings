@@ -6,6 +6,7 @@
 // from /var/lib/flatpak/exports/share/gir-1.0
 // DO NOT EDIT
 
+use crate::{ffi};
 use glib::{translate::*};
 
 #[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]

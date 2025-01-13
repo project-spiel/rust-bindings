@@ -14,9 +14,13 @@ use glib_sys as glib;
 use gobject_sys as gobject;
 
 #[allow(unused_imports)]
-use libc::{c_int, c_char, c_uchar, c_float, c_uint, c_double,
-    c_short, c_ushort, c_long, c_ulong,
-    c_void, size_t, ssize_t, intptr_t, uintptr_t, FILE};
+use std::ffi::{c_int, c_char, c_uchar, c_float, c_uint, c_double,
+    c_short, c_ushort, c_long, c_ulong, c_void};
+#[allow(unused_imports)]
+use libc::{size_t, ssize_t, time_t, off_t, intptr_t, uintptr_t, FILE};
+#[cfg(unix)]
+#[allow(unused_imports)]
+use libc::{dev_t, gid_t, pid_t, socklen_t, uid_t};
 
 #[allow(unused_imports)]
 use glib::{gboolean, gconstpointer, gpointer, GType};
@@ -125,6 +129,7 @@ impl ::std::fmt::Debug for SpeechProviderStreamWriterClass {
 
 // Classes
 #[repr(C)]
+#[allow(dead_code)]
 pub struct SpeechProviderStreamReader {
     _data: [u8; 0],
     _marker: core::marker::PhantomData<(*mut u8, core::marker::PhantomPinned)>,
@@ -138,6 +143,7 @@ impl ::std::fmt::Debug for SpeechProviderStreamReader {
 }
 
 #[repr(C)]
+#[allow(dead_code)]
 pub struct SpeechProviderStreamWriter {
     _data: [u8; 0],
     _marker: core::marker::PhantomData<(*mut u8, core::marker::PhantomPinned)>,
@@ -150,7 +156,6 @@ impl ::std::fmt::Debug for SpeechProviderStreamWriter {
     }
 }
 
-#[link(name = "speech-provider-1.0")]
 extern "C" {
 
     //=========================================================================

@@ -6,7 +6,7 @@
 // from /var/lib/flatpak/exports/share/gir-1.0
 // DO NOT EDIT
 
-use crate::{EventType};
+use crate::{ffi,EventType};
 use glib::{prelude::*,translate::*};
 
 glib::wrapper! {
